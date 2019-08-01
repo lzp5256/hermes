@@ -41,14 +41,15 @@ class Article extends Controller
     public function getArticleInfoAction()
     {
         $info  = [];
-        $activity_id = request()->param();
-        if(!empty($activity_id) && $activity_id > 0){
+        $param = request()->param('');
+        if(!empty($param) && $param[0] =='id' && $param[1]>0){
             $info = Db::name('article')
                 ->where('state','1')
+                ->where('id',$param[1])
                 ->order('id desc')
                 ->find();
-
         }
+
         $this->assign('info',$info);
         $this->setView('article/info');
         return $this->fetch($this->_view);
