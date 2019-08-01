@@ -5,7 +5,7 @@ use think\Model;
 
 class Activity extends Model
 {
-    protected $table = 'activity';
+    protected $table = 'article';
 
     /**
      * 查找多条记录

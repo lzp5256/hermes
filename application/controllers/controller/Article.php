@@ -20,7 +20,7 @@ class Article extends Controller
     public function getArticleList()
     {
         $list = [];
-        $data  = Db::name('activity')
+        $data  = Db::name('article')
             ->where('state','1')
             ->order('id desc')
             ->paginate(10);
@@ -43,7 +43,7 @@ class Article extends Controller
         $info  = [];
         $activity_id = request()->param();
         if(!empty($activity_id) && $activity_id > 0){
-            $info = Db::name('activity')
+            $info = Db::name('article')
                 ->where('state','1')
                 ->order('id desc')
                 ->find();
