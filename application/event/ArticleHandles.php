@@ -19,6 +19,7 @@ class ArticleHandles extends Base
     protected function _setAddData($data)
     {
         return [
+            'uid'   => 39,
             'title' => $data['params']['title'],
             'type'  => 1,
             'content'  => $data['params']['content'],
