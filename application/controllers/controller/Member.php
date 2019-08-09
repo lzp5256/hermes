@@ -23,7 +23,7 @@ class Member extends Controller
             }
         }
         foreach ($list as $k => $v){
-            $list[$k]['name'] = base64_decode($v['name']);
+            $list[$k]['name'] = $v['name'];
         }
 
         $this->setView('member/member_list');
