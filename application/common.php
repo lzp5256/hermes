@@ -181,3 +181,20 @@ function getFunctionName(){
 }
 
 
+function getExamineStr($code){
+    switch ($code){
+        case 0:
+            return '<span class="layui-btn layui-btn-warm layui-btn-mini">待审核</span>';
+            break;
+        case 1:
+            return '<span class="layui-btn layui-btn-normal layui-btn-mini">审核通过</span>';
+            break;
+        case 2:
+            return '<span class="layui-btn layui-btn-danger layui-btn-mini">审核未通过</span>';
+            break;
+        default:
+            return '<span class="layui-btn layui-btn-danger layui-btn-mini">未知状态</span>';
+    }
+}
+
+

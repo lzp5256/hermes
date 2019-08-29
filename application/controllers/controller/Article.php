@@ -30,6 +30,10 @@ class Article extends Controller
                 $list[$k] = $v;
             }
         }
+        foreach ($list as $k => $v){
+            $list[$k]['time'] = date('Y-m-d',strtotime($v['time']));
+            $list[$k]['examine'] = getExamineStr($v['examine']);
+        }
 
         $this->assign('page', $page);
         $this->assign('list',$list);
@@ -90,5 +94,13 @@ class Article extends Controller
         }
 
         return json($return);
+    }
+
+    /**
+     * exArticleView | 文章审核页面
+     */
+    public function exArticleView(){
+        $this->setView('article/add');
+        return $this->fetch($this->_view);
     }
 }

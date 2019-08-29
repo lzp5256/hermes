@@ -25,5 +25,6 @@ Route::group('article',function (){
     Route::get('addView','controllers/article/getAddArticleView');
     Route::get('info','controllers/article/getArticleInfoAction');
     Route::post('create','controllers/article/createArticleAction');
+    Route::post('exView','controllers/article/exArticleView');
 });
 

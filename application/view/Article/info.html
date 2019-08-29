@@ -26,8 +26,10 @@
             <div class="layui-form-item">
                 <label for="title" class="layui-form-label">
                     <span class="x-red">*</span>文章标题</label>
-                <div class="layui-input-inline">
-                    <input type="text" id="title" name="title" required="" lay-verify="title" autocomplete="off" class="layui-input" value="{$info.title}"></div>
+                <div class="layui-input-block">
+<!--                    <input type="text" id="title" name="title" required="" lay-verify="title" autocomplete="off" class="layui-input" value="{$info.title}">-->
+                    <textarea id="title" name="title" required="" lay-verify="title" autocomplete="off" class="layui-textarea">{$info.title}</textarea>
+                </div>
                 <div class="layui-form-mid layui-word-aux">
                 </div>
             </div>
@@ -69,8 +71,8 @@
             </div>
 
             <div class="layui-form-item" style="text-align: center;">
-                <button class="layui-btn" lay-filter="add" lay-submit="">编辑</button>
-                <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                <button class="layui-btn" lay-filter="add" lay-submit="">确认</button>
+                <button type="reset" class="layui-btn layui-btn-primary">取消</button>
             </div>
         </form>
     </div>
